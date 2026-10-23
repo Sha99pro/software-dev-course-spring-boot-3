@@ -81,19 +81,19 @@ will automatically choose reasonable defaults for the column names and types bas
 
 ## Adding JPA Repositories
 
-Next, we need to add JPA repositories for each of the models.  JPA repositories are interfaces that extend the
+Next, we need to add JPA com.example.springBoot2.repositories for each of the models.  JPA com.example.springBoot2.repositories are interfaces that extend the
 `JpaRepository` interface, and provide methods for accessing the database.  Spring Boot will automatically create
 implementations of these interfaces for us.
 
 Add a new package under the main package called `Repositories`.  This is where we will be adding the JPA
-repositories for the application.
+com.example.springBoot2.repositories for the application.
 
 Right-click on the `Repositories` package and create a new Java Interface called `BookRepository`.  This interface
 should extend the `JpaRepository` interface, and should be parameterized with the `Book` model class and the type of
 the `id` member of the `Book` model class (which is `Integer`.)
 
 ```java
-package com.example.springBoot2.repositories;
+package com.example.springBoot2.com.example.springBoot2.repositories;
 
 import com.example.springBoot2.models.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -106,7 +106,7 @@ Once you have created the `BookRepository` interface, you should add a similar i
 
 ## Updating the Controllers
 
-The next step is to update the controllers to use the JPA repositories to access the database.
+The next step is to update the controllers to use the JPA com.example.springBoot2.repositories to access the database.
 
 ### Setting Up To Use The JPA Repositories
 
@@ -125,7 +125,7 @@ Example for the `BookController`:
 package com.example.springBoot2.controllers;
 
 import com.example.springBoot2.models.Book;
-import com.example.springBoot2.repositories.BookRepository;
+import com.example.springBoot2.com.example.springBoot2.repositories.BookRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
